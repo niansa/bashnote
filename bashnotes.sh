@@ -2,18 +2,29 @@
 . ./config.sh
 echo $welcomemsg
 echo "For command-list, type cmds."
+until [ "1" = "2" ]
+do
 echo -n '$ '
-read cmd
-if [ $cmd = "cmds" ]
+read cmdy
+if [ $cmdy = "cmds" ]
 then
  echo "command-list: cmds, list, add, del"
 fi
-if [ $cmd = "list" ]
+if [ $cmdy = "list" ]
 then
- ls ~/${dir}/
+ ls ~/${dier}/
 if
-if [ $cmd = "add" ]
+if [ $cmdy = "add" ]
 then
- echo -n "Name of new note: "
+ echo -n "Name for new note: "
  read namey
- echo "" > ~/${dir}/${namey}
+ echo "" > ~/${dier}/${namey}
+ nano ~/${dier}/${namey}
+fi
+if [ $cmdy = "del" ]
+then
+ echo -n "Note to delete: "
+ read namey
+ rm ~/${dier}/${namey}
+fi
+done
