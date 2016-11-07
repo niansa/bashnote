@@ -1,5 +1,6 @@
 #! /bin/bash
 . ./config.sh
+mkdir -p ~/${dier}/
 echo $welcomemsg
 echo "For command-list, type cmds."
 until [ "1" = "2" ]
