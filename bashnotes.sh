@@ -1,6 +1,9 @@
 #! /bin/bash
 . ./config.sh
-mkdir -p ~/${dier}/
+If [ ! -d ~/${dier}/ ]
+then
+ mkdir ~/${dier}/
+fi
 echo $welcomemsg
 echo "For command-list, type cmds."
 until [ "1" = "2" ]
